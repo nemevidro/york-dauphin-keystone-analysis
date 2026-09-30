@@ -1,4 +1,4 @@
-**# York and Dauphin County Keystone Analysis
+York and Dauphin County Keystone Analysis
 
 This project compares weighted Keystone proficiency rates for Algebra I and Biology in York and Dauphin County, Pennsylvania.
 
@@ -6,4 +6,4 @@ This project compares weighted Keystone proficiency rates for Algebra I and Biol
 York County had higher weighted proficiency rates than Dauphin County in both Algebra I and Biology.
 
 ## Tools used
-R, readxl, dplyr, and ggplot2**
+R, readxl, dplyr, and ggplot2
