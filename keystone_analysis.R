@@ -8,7 +8,7 @@ library(dplyr)
 library(ggplot2)
 
 keystone <- read_excel(
-  "PA/2025-keystone-exams-school-level-data.xlsx",
+  "2025-keystone-exams-school-level-data.xlsx",
   sheet = "Keystone",
   skip = 3)
 
@@ -61,3 +61,21 @@ ggplot(
     y = "Students Proficient or Above",
     fill = "Subject") +
   theme_minimal()
+
+## I will continue researching this case by using regression to examine whether 
+#proficiency rates differ by county and subject.
+
+# Regression model: compare proficiency rates by county and subject.
+# Larger schools will receive more weight because they tested more students.
+
+model <- lm(
+  `Percent Proficient and above` ~ County * Subject,
+  data = county_data,
+  weights = `Number Scored`)
+
+summary(model)
+
+#York had higher scores then Dauphin;next time i will use mroe info
+#the reg model did verify that the county was associated with 
+#the proficiency rates; there's a strong relationship with counties and
+#proficiency rates
